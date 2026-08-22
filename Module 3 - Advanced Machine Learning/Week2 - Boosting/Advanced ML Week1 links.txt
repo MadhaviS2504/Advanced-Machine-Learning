@@ -1,0 +1,25 @@
+Advanced Machine larning models links Week1 - Ensemble techniques
+https://blog.paperspace.com/bagging-ensemble-methods/
+
+https://www.digitalocean.com/community/tutorials/random-forest-in-machine-learning
+
+https://www.mygreatlearning.com/blog/random-forest-algorithm/
+https://www.mygreatlearning.com/blog/bias-variance-tradeoff-in-machine-learning/
+https://www.mygreatlearning.com/blog/overfitting-and-underfitting-in-machine-learning/
+https://www.mygreatlearning.com/blog/bagging-boosting/
+https://www.mygreatlearning.com/blog/data-preprocessing-for-machine-learning/
+https://www.mygreatlearning.com/blog/data-normalization-and-standardization/
+
+
+drkaruna.batra@gmail.com
+
+machinelearningmastery.com
+analyticsvidya
+kaggle
+
+
+Boosting:
+https://blog.paperspace.com/adaboost-optimizer/
+https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d
+https://stackabuse.com/gradient-boosting-classifiers-in-python-with-scikit-learn/
+https://xgboost.readthedocs.io/en/latest/tutorials/model.html

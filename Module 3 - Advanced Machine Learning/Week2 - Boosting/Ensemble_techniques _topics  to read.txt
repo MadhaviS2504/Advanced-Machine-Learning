@@ -1,0 +1,53 @@
+Below is an overview of the 30 step-by-step tutorial lessons you will work through:
+
+Each lesson was designed to be completed in about 30-to-60 minutes by an average developer.
+
+Part 1: Foundation
+Lesson 01: What is Ensemble Learning
+Lesson 02: Why Use Ensemble Learning
+Lesson 03: Intuition for Ensemble Learning
+Part 2: Background
+Lesson 04: Ensemble Member Diversity
+Lesson 05: Techniques for Combining Predictions
+Lesson 06: Ensemble Complexity
+Lesson 07: Types of Ensemble Algorithms
+Part 3: Multiple Models
+Lesson 08: One-vs-Rest and One-vs-All Models
+Lesson 09: Error-Correcting Output Codes
+Lesson 10: Multiple Regression Models
+Lesson 11: Dynamic Classifier Selection
+Lesson 12: Dynamic Ensemble Selection
+Lesson 13: Mixture of Experts Ensemble
+Part 4: Bagging
+Lesson 14: Bagged Decision Trees Ensemble
+Lesson 15: Random Subspace Ensemble
+Lesson 16: Feature Selection Bagging Ensemble
+Lesson 17: Random Forest Ensemble
+Lesson 18: Extra Trees Ensemble
+Lesson 19: Data Preparation Bagging Ensemble
+Part 5: Boosting
+Lesson 20: Strong vs Weak Learners
+Lesson 21: Adaptive Boost Ensemble
+Lesson 22: Gradient Boosting Ensemble
+Lesson 23: Extreme Gradient Boosting Ensemble
+Lesson 24: Light Gradient Boosting Machine Ensemble
+Part 6: Stacking
+Lesson 25: Voting Ensemble
+Lesson 26: Weighted Average Ensemble
+Lesson 27: Ensemble Member Selection
+Lesson 28: Stacking Ensemble
+Lesson 29: Blending Ensemble
+Lesson 30: Super Learner Ensemble
+Appendix
+Appendix A: Getting help
+Appendix B: How to Setup a Workstation for Python
+You can see that each part targets a specific learning outcome, and so does each tutorial within each part. This acts as a filter to ensure you are only focused on the things you need to know to get to a specific result and do not get bogged down in the math or near-infinite number of digressions.
+
+The tutorials were not designed to teach you everything there is to know about each of the theories or techniques. They were designed to give you an understanding of how they work, how to use them, and how to interpret the results the fastest way I know how: to learn by doing.
+
+EBook Table of Contents
+The screenshot below was taken from the PDF Ebook. It provides you a full overview of the table of contents from the book.
+
+Ensemble Learning Algorithms With Python Table of Contents
+Ensemble Learning Algorithms With Python Table of Contents
+
