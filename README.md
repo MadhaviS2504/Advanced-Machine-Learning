@@ -1,93 +1,59 @@
-Advanced-Machine-Learning
-This repository contains course materials and hands‑on notebooks for Module 3 — Advanced Machine Learning, focusing on ensemble methods (bagging, boosting, random forests), model tuning, cross‑validation, and resampling.
+# Advanced Machine Learning — Module 3
 
-Quick links
+Concise, hands‑on materials for Module 3: advanced ensemble methods and model tuning. This repository collects lecture notebooks, supporting documents, and datasets so students and practitioners can reproduce the in-class examples and run the provided case studies.
 
-Module 3 — Advanced Machine Learning/
-Week 1 — Bagging and Random Forest: Module 3 - Advanced Machine Learning/Week 1- Bagging and Random Forest/README.md
-Week 2 — Boosting: Module 3 - Advanced Machine Learning/Week2 - Boosting/README.md
-Week 3 — Model Tuning: Module 3 - Advanced Machine Learning/Week3 - Model Tuning/README.md
-How to reproduce
+## What you'll find
+- Week 1 — Bagging & Random Forests
+  - Practical notebook showing BaggingClassifier and RandomForestClassifier on a credit dataset, data preprocessing for categorical features, basic hyperparameter tuning and evaluation. (See: Module 3 - Advanced Machine Learning/Week 1- Bagging and Random Forest/README.md)
+- Week 2 — Boosting
+  - Hands-on notebook covering AdaBoost, Gradient Boosting and XGBoost, with tips for tuning learning_rate, n_estimators and max_depth. Includes curated reading lists. (See: Module 3 - Advanced Machine Learning/Week2 - Boosting/README.md)
+- Week 3 — Model Tuning
+  - Notebooks on K‑fold cross validation, GridSearchCV, and resampling for imbalanced data (SMOTE, oversampling/undersampling). Includes guidance on pipelines and avoiding data leakage. (See: Module 3 - Advanced Machine Learning/Week3 - Model Tuning/README.md)
+- Project folder
+  - EasyVisa case study notebook (.ipynb and exported .html) and dataset; an end‑to‑end example applying the techniques from the module.
 
-git clone ... then open the Module 3 notebooks in Jupyter or Colab (instructions per-notebook).
-Install the noted packages (some notebooks pin versions); restart kernel/runtime after installs.
-Run cells sequentially.
-Notes
+## Quick start
+1. Clone the repository:
 
-Several notebooks pin package versions and include install cells — if you install packages inside a running runtime, restart before executing downstream cells.
-Notebooks and datasets can be large so expect some notebooks to take time.
-Expanded Week 1 README (per-notebook summaries)
+```bash
+git clone https://github.com/MadhaviS2504/Advanced-Machine-Learning.git
+cd "Advanced-Machine-Learning/Module 3 - Advanced Machine Learning"
+```
 
-Week 1 — Bagging and Random Forest
-This folder contains the bagging/random-forest hands‑on materials and an additional case study.
+2. Open a notebook in Jupyter or upload the .ipynb to Google Colab.
+3. Install dependencies if needed (some notebooks pin versions):
 
-Notebooks and what they do
+```bash
+# common packages used across notebooks
+pip install pandas numpy scikit-learn matplotlib seaborn
+# for boosting notebooks
+pip install xgboost
+# for resampling notebooks
+pip install imbalanced-learn
+```
 
-Ensemble_Hands-On_Bagging-2 (1).ipynb
+4. If you run pip installs inside a running runtime (e.g., Colab), restart the kernel/runtime before executing subsequent cells.
+5. Run cells sequentially in each notebook to reproduce the analyses.
 
-Loads the credit dataset, inspects distributions and types, converts object columns to categorical/ordinal codes.
-Demonstrates BaggingClassifier with a chosen base estimator and RandomForestClassifier; shows when bagging reduces variance and how RF injects feature randomness.
-Includes GridSearchCV examples for tuning ensemble hyperparameters, compares base learners (LogisticRegression / DecisionTree), and shows evaluation with accuracy, confusion matrix and other sklearn metrics.
-Notes on reproducibility (random_state) and preprocessing to avoid leakage.
-Additional Case Study/Case_Study_Diabetes_Risk_Prediction_Notebook.ipynb
+## Highlights — what to try first
+- Week 1: open `Ensemble_Hands-On_Bagging-2 (1).ipynb` to see preprocessing + Bagging vs Random Forest comparisons.
+- Week 2: open `Ensemble_Hands_On_Boosting_Notebook.ipynb` (contains an install cell with pinned versions and notes about restarting the runtime).
+- Project: open `Project/Case_Study_EasyVisa_Prediction_Notebook (4).ipynb` for an end‑to‑end case study using the supplied CSV.
 
-Applies ensemble methods to the Pima Indians diabetes dataset: preprocessing, model training, evaluation and interpretation of results for a health-risk classification task.
-Datasets
+## Reproducibility notes
+- Several notebooks pin package versions (especially the boosting notebook). If you change installed packages, restart the kernel/runtime before running downstream cells.
+- Use the shown `random_state` values where provided to make experiments deterministic.
+- Always fit resampling (SMOTE / oversampling) only on the training split — many notebooks demonstrate correct placement via sklearn Pipelines.
 
-credit (2).csv — main credit dataset used across the notebooks.
-Additional Case Study/pima-indians-diabetes.csv
-How to run
+## File map (top-level)
+- `Module 3 - Advanced Machine Learning/`
+  - `Week 1- Bagging and Random Forest/`
+  - `Week2 - Boosting/`
+  - `Week3 - Model Tuning/`
+  - `Project/` — EasyVisa case study and dataset
 
-Open in Jupyter or Colab; if necessary pip install pandas/numpy/scikit-learn/matplotlib/seaborn then run cells sequentially.
-Expanded Week 2 README (per-notebook summaries)
+## Questions or contributions
+If you find issues, want clearer instructions for a notebook, or want an environment file (requirements.txt / environment.yml) created from the notebooks, open an issue or comment on the repository.
 
-Week 2 — Boosting
-This folder contains boosting hands‑on materials plus reading lists.
-
-Notebooks and what they do
-
-Ensemble_Hands_On_Boosting_Notebook.ipynb
-Shows how to use AdaBoostClassifier, GradientBoostingClassifier, and XGBClassifier on the credit dataset.
-Contains an explicit pip-install cell with pinned versions (noted in the notebook). After install, notebook instructs to restart runtime.
-Demonstrates setting a DecisionTree base_estimator with random_state when tuning AdaBoost to stabilize results.
-Uses GridSearchCV to tune key hyperparameters (learning_rate, n_estimators, max_depth), compares algorithms, and evaluates with confusion matrices and standard metrics.
-Includes data‑preprocessing steps for categorical features and commentary about reproducibility.
-Supporting materials
-
-Ensemble Techiniques.docx — lecture notes on ensemble concepts.
-Ensemble_techniques _topics to read.txt and all python and datascicent links from youtube.txt — curated reading and video resources.
-How to run
-
-Install pinned packages (if you use the notebook cell, restart kernel after install), then run the notebook cells in order.
-Expanded Week 3 README (per-notebook summaries)
-
-Week 3 — Model Tuning
-This folder focuses on model selection, cross‑validation, hyperparameter search, and handling imbalanced data.
-
-Notebooks and what they do
-
-Hyperparameter_tuning_Notebook.ipynb
-
-Introduces a real‑world context (bank loss / credit default).
-Shows how to design parameter grids and run GridSearchCV, including scoring choices and how to interpret cross‑validation results.
-Demonstrates how to structure searches to reduce runtime and overfitting (e.g., using reasonable grid ranges and cross‑validation folds).
-K_fold_cross_validation_Notebook.ipynb
-
-Demonstrates K‑fold and StratifiedKFold, cross_val_score usage, and how to read and interpret CV statistics.
-Covers repeated CV and when to prefer stratification for imbalanced classes.
-Oversampling_and_undersampling_Notebook.ipynb
-
-Hands‑on resampling: RandomOverSampler, RandomUnderSampler, and SMOTE (from imbalanced‑learn).
-Shows proper placement of resampling inside a pipeline to avoid leakage, and compares evaluations with and without resampling.
-Supporting materials
-
-Week 3 Overview.docx — lecture/overview.
-MLS - Model tuning/ — additional supporting files.
-How to run
-
-Install packages (pandas, numpy, scikit-learn, imbalanced-learn, matplotlib, seaborn), open notebooks, and run cells sequentially. Use pipelines and only apply resampling to training splits.
-Next step If this text looks good, reply “Proceed to commit” and I will add:
-
-The updated root README,
-Expanded README.md files for Week 1, Week 2, and Week 3.
-If you want edits to any paragraph, tell me which week and what to change before I commit.
+---
+Updated README to provide an organized, beginner‑friendly overview of Module 3 materials and clear steps to reproduce the notebooks.
